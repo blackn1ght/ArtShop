@@ -8,4 +8,14 @@ html(ng-app="ArtShop")
     script(src='/bower_components/angular-route/angular-route.min.js', type="text/javascript")
     script(src='/js/app/app.js', type="text/javascript")
   body(ng-controller="AppCtrl")
-    block content
+    div.header
+      div.title
+        span= title
+      div.menu
+        ul
+          li 
+            a(href="/account/register") register
+          li 
+            a(href="/account/login") login
+    div.content
+      block content
