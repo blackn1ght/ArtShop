@@ -1,0 +1,23 @@
+{
+  "name": "ArtShop",
+  "version": "0.0.0",
+  "description": "Online art shop written in Node and AngularJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:blackn1ght/ArtShop.git"
+  },
+  "keywords": [
+    "artshop",
+    "art",
+    "shop"
+  ],
+  "author": "Tom Cowell",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/blackn1ght/ArtShop/issues"
+  }
+}
