@@ -1,0 +1,62 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  background-color: #EBE3AA;
+}
+
+/* http://www.colourlovers.com/palette/944213/forever_lost */
+
+.header {
+  overflow: hidden;
+  padding: 5px;
+  background-color: #5D4157;
+  color: #EBE3AA;
+  border-bottom: 1px solid #838689;
+  
+  -webkit-box-shadow: 0px -5px 30px 10px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px -5px 30px 10px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px -5px 30px 10px rgba(50, 50, 50, 0.75);
+}
+
+  .header .title {
+    float: left;
+    
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px;
+  }
+  
+  .header .menu {
+    float: right;
+    text-align: right;
+    padding: 7px;
+  }
+  
+    .header .menu ul {
+      padding: 0;
+      margin: 0;
+    }
+  
+    .header .menu ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    
+      .header .menu ul li a {
+        text-decoration: none;
+        color: #EBE3AA;
+      }
+      
+      .header .menu ul li a:hover {
+        padding-bottom: 12px;
+        border-bottom: 3px solid #EBE3AA;
+      }
+    
+.content {
+  margin: 0 15px;
+}
+
+  .content h1,
+  .content h2 {
+    color: #5D4157;
+  }
