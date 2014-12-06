@@ -48,7 +48,7 @@ body {
       }
       
       .header .menu ul li a:hover {
-        padding-bottom: 12px;
+        padding-bottom: 13px;
         border-bottom: 3px solid #EBE3AA;
       }
     

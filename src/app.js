@@ -1,12 +1,17 @@
 var express = require('express');
+var session = require('express-session');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+LocalStrategy = require('passport-local').Strategy;
+var flash = require('connect-flash');
+var Database = require('./database.js');
+var auth = require('./auth')(passport);
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -18,13 +23,18 @@ app.set('view engine', 'jade');
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(flash());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
+app.use(session({ secret: 'pingpongrulesyohaha'}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+//app.use('/', routes);
 app.use('/', routes);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -63,5 +73,8 @@ var server = app.listen(3000, function() {
   
   console.log('Example app listening at http://%s:%s', host, port)
 });
+
+var database = new Database();
+database.testConnection();
 
 module.exports = app;

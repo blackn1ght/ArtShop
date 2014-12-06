@@ -1,0 +1,40 @@
+extends layout
+
+block head
+
+block content
+  div(ng-controller="RegisterCtrl")
+    h1 Register
+    {{test}}
+    div#register-form
+      form(action="/register", method="POST")
+        div.form-row
+          div.form-row-label
+            label.ui-label Email
+          div.form-row-field
+            input.ui-text-field(name="email", ng-model="email")
+        div.form-row
+          div.form-row-label
+            label.ui-label Password
+          div.form-row-field
+            input.ui-password-field(type="password", ng-model="password", name="password")
+        div.form-row
+          div.form-row-label
+            label.ui-label Confirm Password
+            p.ui-label-details Please confirm your password.
+          div.form-row-field
+            input.ui-password-field(type="password", ng-model="passwordConfirm")
+        div.form-row
+          div.form-row-label
+            label.ui-label First Name
+          div.form-row-field
+            input.ui-text-field(name="firstName", ng-model="firstName")
+        div.form-row
+          div.form-row-label
+            label.ui-label Last Name
+          div.form-row-field
+            input.ui-text-field(name="lastName", ng-model="lastName")
+        div.form-row
+          div.form-row-label
+          div.form-row-field
+            button.ui-button Register

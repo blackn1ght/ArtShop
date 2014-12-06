@@ -25,6 +25,11 @@ body {
     font-weight: bold;
     padding: 5px;
   }
+
+  .header .title a {
+    text-decoration: none;
+    color: #EBE3AA;
+  }
   
   .header .menu {
     float: right;
@@ -53,10 +58,81 @@ body {
       }
     
 .content {
-  margin: 0 15px;
+  margin: 0 auto;
+  width: 968px;
 }
 
   .content h1,
   .content h2 {
     color: #5D4157;
   }
+
+#register-form {
+  width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #F5F0CE;
+  border-left: 2px solid #5d4157;
+}
+
+.form-row {
+  overflow: hidden;
+  padding: 7px;
+}
+
+  .form-row .form-row-label {
+    float: left;
+    width: 40%;
+  }
+
+  .form-row .form-row-field {
+    float: right;
+    width: 60%;
+  }
+
+label.ui-label {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+p.ui-label-details {
+  font-size: 0.95em;
+  color: #666;
+  margin: 0px;
+}
+
+input.ui-password-field, 
+input.ui-text-field {
+  padding: 5px;
+  font-size: 1.0em;
+  border: 1px solid #5d4157;
+  width: 250px;
+}
+
+  input.ui-password-field.valid,
+  input.ui-text-field.valid {
+    border: 1px solid green;
+    color: green;
+  }
+
+button.ui-button,
+a.ui-button {
+  width: 75px;
+  padding: 7px;
+  background-color: #5d4157;
+  color: #EBE3AA;
+  font-weight: bold;
+  border: 1px solid #5d4157;
+}
+
+.float-container {
+  overflow: hidden;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}

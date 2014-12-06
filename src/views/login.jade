@@ -1,0 +1,23 @@
+extends layout
+
+block head
+
+block content
+	h1 Login
+	{{test}}
+	p Login form stuff here
+	form(method="POST", action="/login")
+		div.form-row
+			div.form-row-label
+				label.ui-label Email
+			div.form-row-field
+				input.ui-text-field(name="email")
+		div.form-row
+			div.form-row-label
+				label.ui-label Password
+			div.form-row-field
+				input.ui-password-field(type="password", name="password")
+		div.form-row
+			div.form-row-label
+			div.form-row-field
+				button.ui-button(type="submit") Login
