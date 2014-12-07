@@ -28,11 +28,11 @@ module.exports = function(passport) {
 							console.log('Could not create user.', err);
 							return done(null, false, { message: 'Could not create user.'});
 						} else {
-							return user;
+							return user.id;
 						}	
 				});
 
-				return done(null, user);
+				return done(null, user.id);
 			});
 		});
 	}));
@@ -62,13 +62,15 @@ module.exports = function(passport) {
 	};
 
 	passport.serializeUser = function(user, done) {
-		return done(null, user);
+		return done(null, user.id);
 	};
 
-	passport.deserializeUser = function(obj, done) {
-		console.log('deserializeUser', obj);
-		return done(null, obj);
-	};
+	passport.deserializeUser(function(id, done) {
+		User.find({where: { id: id}}).complete(function(err, user) {
+			return done(err, user);
+		});
+	});
+
 };
 
 
